@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <title>Thymeleaft Demo</title>
+</head>
+<body>
+<h3>Thymeleaf Scope</h3>
+<!--Request: <span th:text="${#httpServletRequest.getAttribute('request')}"></span><br />-->
+httpServletRequest: <span th:text="${httpRequest.getAttribute('request')}"></span><br />
+Session: <span th:text="${session.session}"></span><br />
+Application: <span th:text="${application.application}"></span><br />
+
+<h3>Thymeleaf URLs</h3>
+<!-- redirect to demo page without parameter -->
+<a th:href="@{~/demo}">Visit Demo Page</a> <br />
+<!-- redirect to demo page with parameter -->
+<a th:href="@{~/demo(id=1, name=eric)}">Visit Demo page With Parameter</a>
+
+</body>
+</html>
